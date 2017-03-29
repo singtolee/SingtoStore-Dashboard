@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { routes } from './app.routes';
 import { AuthGuard } from './auth.service';
 import { AddressesComponent } from './addresses/addresses.component';
+import { SupplersComponent } from './supplers/supplers.component';
 
 export const fbConfig = {
   apiKey: "AIzaSyCOL_GgaWIYbQAdSvZzF0RH9w8nnQRG_jU",
@@ -29,7 +30,8 @@ export const fbConfig = {
     ProductComponent,
     OrdersComponent,
     DashboardComponent,
-    AddressesComponent
+    AddressesComponent,
+    SupplersComponent
   ],
   imports: [
     BrowserModule,

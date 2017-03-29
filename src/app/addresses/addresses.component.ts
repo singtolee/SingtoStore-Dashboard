@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-addresses',
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddressesComponent implements OnInit {
 
-  constructor() { }
+  addresses:FirebaseListObservable<any>;
+  newAddress:string='';
+  constructor(public af:AngularFire) {
+    this.addresses = af.database.list('/OfficeBuildings',{
+      query:{
+        limitToFirst: 100
+      }
+    });
+  }
+
+  saveNewAddress(){
+    this.addresses.push(this.newAddress);
+    this.newAddress = '';
+  }
 
   ngOnInit() {
   }
