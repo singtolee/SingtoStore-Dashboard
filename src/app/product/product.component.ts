@@ -10,6 +10,11 @@ export class ProductComponent implements OnInit {
 
   cates: FirebaseListObservable<any>;
   supplers: FirebaseListObservable<any>;
+  //images urls list
+  private urls = [];
+  //selected category and suppler
+  private selectedCate:string;
+  private selectedSuppler:string;
 
   constructor(public af: AngularFire) {
     this.cates = af.database.list('/ProductCategory',{
@@ -23,6 +28,10 @@ export class ProductComponent implements OnInit {
       }
     });
 
+  }
+
+  uploadPrd(){
+    this.urls.push("ABC");
   }
 
   ngOnInit() {

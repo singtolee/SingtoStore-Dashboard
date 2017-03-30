@@ -61,4 +61,8 @@
 </div>
 <! third col>
 <div class="col-lg-4">
+  <button class="btn btn-success" (click)="uploadPrd()">DISPLAY PRD INFO</button>
+  <ul>
+    <li *ngFor="let url of urls">{{url}}</li>
+  </ul>
 </div>

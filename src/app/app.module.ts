@@ -15,6 +15,7 @@ import { AuthGuard } from './auth.service';
 import { AddressesComponent } from './addresses/addresses.component';
 import { SupplersComponent } from './supplers/supplers.component';
 
+
 export const fbConfig = {
   apiKey: "AIzaSyCOL_GgaWIYbQAdSvZzF0RH9w8nnQRG_jU",
   authDomain: "aomai-f24a2.firebaseapp.com",
